@@ -1,22 +1,22 @@
+import 'package:beauty_spa/views/home.dart';
+import 'package:beauty_spa/views/pages/profile.dart';
+import 'package:beauty_spa/views/pages/lc.aboutUs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:malawi_jobs/views/home.dart';
-import 'package:malawi_jobs/views/jobs/profile.dart';
-import 'package:malawi_jobs/views/jobs/saved_jobs.dart';
-import 'package:malawi_jobs/widgets/popup_widget.dart';
 
 import 'bottom_nav_item.dart';
 
+// ignore: must_be_immutable
 class BottomNav extends StatelessWidget {
   int currentTab;
 
   
 
-  BottomNav({Key? key, required this.currentTab});
+  BottomNav({super.key, required this.currentTab});
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 75,
+      height: 77,
       padding: const EdgeInsets.all(8.0),
       child: Card(
         elevation: 3,
@@ -30,14 +30,14 @@ class BottomNav extends StatelessWidget {
               text: 'Contact',
               icon: 'saved.png',
               onPressed: () {
-                Get.offAll(SavedJobs());
+                Get.offAll(const TContacts());
               },
             ),
               BottomNavItem(
               text: 'Home',
               icon: 'home.png',
               onPressed: () {
-                Get.offAll(Homeview());
+                Get.offAll(const Homeview());
                 
               },
             ),
@@ -47,7 +47,7 @@ class BottomNav extends StatelessWidget {
               text: 'Profile',
               icon: 'profile.png',
               onPressed: () {
-                Get.offAll(ProfileJobs());
+                Get.offAll(const ProfileJobs());
                 /*PopupWidget().showSnackbar(
                   backgroundColor: Colors.orange,
                   heading: 'Coming soon!',

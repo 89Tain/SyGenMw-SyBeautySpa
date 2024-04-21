@@ -1,26 +1,23 @@
 
+import 'package:beauty_spa/views/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:malawi_jobs/views/auth/login.dart';
 
-import '../constants/constants.dart';
-import '../widgets/special_title.dart';
-import 'auth/category_selector.dart';
-import 'auth/register.dart';
 
 
 
 class SplashScreenView extends StatelessWidget {
+  const SplashScreenView({super.key});
+
 
   void navigateToHomeScreen()
   {
-    var d = Duration(seconds: 5);
+    var d = const Duration(seconds: 5);
     // delayed 5 seconds to next page
-    Key key;
     Future.delayed(d, () {
       //_appInitializer.checkIfLoggedIn();
-      Get.to(LoginView());
+      Get.to(const LoginView());
     });
   }
 
@@ -45,7 +42,7 @@ class SplashScreenView extends StatelessWidget {
                   period : const Duration(milliseconds: 2000),
                   baseColor: Colors.black,
                   highlightColor: Colors.red,
-                  child: Text('Your beauty, our priority',style: TextStyle(fontSize: 30),))
+                  child: const Text('Your beauty, our priority',style: TextStyle(fontSize: 30),))
                     ],
                   ),
                 ),

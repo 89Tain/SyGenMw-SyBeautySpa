@@ -2,9 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_loading/card_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gallery_3d/gallery3d.dart';
-import 'package:get/get.dart';
-import '../../models/galleryItemCustom.dart';
+import '../models/lc.galleryItemCustom.dart';
 
+// ignore: must_be_immutable
 class GalleryImagesCorousel extends StatelessWidget {
   List<GalleryItemCustom> galleryItems;
   double height;
@@ -13,7 +13,7 @@ class GalleryImagesCorousel extends StatelessWidget {
   bool isGalleryItem;
 
 
-  GalleryImagesCorousel({Key? key, this.isGalleryItem = false, required this.galleryItems, this.autoLoop = true, this.height = 300, this.width = 220});
+  GalleryImagesCorousel({super.key, this.isGalleryItem = false, required this.galleryItems, this.autoLoop = true, this.height = 300, this.width = 220});
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +39,7 @@ class GalleryImagesCorousel extends StatelessWidget {
           //controller.corouselCurrentIndex.value = index;
         },
         onClickItem: (value) {
+          // ignore: avoid_print
           print(value);
          // print('clickedd'+controller.corouselCurrentIndex.value.toString()+' FILTERED ITEMS'+con.filteredGalleryItems.length.toString());
        // GalleryDetailsScreenModal().popup(context: context, galleryItem: con.filteredGalleryItems[value]) : ;

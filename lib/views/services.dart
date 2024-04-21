@@ -1,13 +1,13 @@
 
 
+import 'package:beauty_spa/models/lc.galleryItemCustom.dart';
 import 'package:flutter/material.dart';
-import 'package:malawi_jobs/models/galleryItemCustom.dart';
 import '../../constants/constants.dart';
 import '../../widgets/bottom_nav.dart';
 import '../widgets/gallery_corousel.dart';
-import '../widgets/product_item.dart';
-import '../widgets/stylist_item.dart';
 
+
+// ignore: must_be_immutable
 class Services extends StatelessWidget {
 
   var imagesList=['https://www.health.com/thmb/K_Vtfnh3Yu-Ceya3aETxfH72k9Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.jpg',
@@ -15,6 +15,8 @@ class Services extends StatelessWidget {
               'https://media.istockphoto.com/id/1350573811/photo/hairstylists-braiding-and-extending-a-clients-hair-in-salon.jpg?s=612x612&w=0&k=20&c=1Nx72JfLU7Zd5AungOrrTK1JAlJTEtFLoqgllTQXXoo=',
               'https://salonsuitespb.com/wp-content/uploads/2023/09/Nail-Salon-1.jpg'
             ];
+
+  Services({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class Services extends StatelessWidget {
                   Constants().appLogo,
                   Container(
                     height: 50,
-                    margin: EdgeInsets.all(8),
+                    margin: const EdgeInsets.all(8),
                     width: MediaQuery.of(context).size.width,
                     color: Colors.white54,
                     child: Row(
@@ -59,7 +61,7 @@ class Services extends StatelessWidget {
               GalleryItemCustom(title: 'Spar', description: 'We do Spar', imageUrl: imagesList[2], category: 'category'),
                  GalleryItemCustom(title: 'Spar', description: 'We do Spar', imageUrl: imagesList[3], category: 'category'),
             ], height: 500, width: 370, autoLoop: false, isGalleryItem: true),
-            SizedBox(height: 100,)
+            const SizedBox(height: 100,)
             
             ])),
       ));

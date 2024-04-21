@@ -1,14 +1,11 @@
 
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:card_loading/card_loading.dart';
+import 'package:beauty_spa/components/banner.component.dart';
+import 'package:beauty_spa/widgets/booking_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:malawi_jobs/widgets/booking_item.dart';
-
 import '../constants/constants.dart';
 import '../widgets/bottom_nav.dart';
 import '../widgets/icon_buttons.dart';
-import '../widgets/special_title.dart';
 import 'products.dart';
 import 'services.dart';
 import 'sytlists.dart';
@@ -16,6 +13,8 @@ import 'sytlists.dart';
 
 
 class Homeview extends StatelessWidget {
+  const Homeview({super.key});
+
 
 
 
@@ -27,7 +26,7 @@ class Homeview extends StatelessWidget {
         appBar:AppBar(
         
           backgroundColor: Constants().primaryColor,
-          title: Text('Madam O\'s Beauty Spar'),
+          title: const Text('Madam O\'s Beauty Spar'),
         ),
         floatingActionButton: BottomNav(
           currentTab: 1,
@@ -39,6 +38,9 @@ class Homeview extends StatelessWidget {
           child:  ListView(
             
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0,left: 10.0,right: 10.0),
+                child: tBanner("Collection")),
             
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -65,7 +67,7 @@ class Homeview extends StatelessWidget {
                       iconPicture: 'assets/icons/stylists.png', 
                       text: 'Stylists',
                       onPressed: () {
-                       Get.to(Stylists());
+                       Get.to( Stylists());
                   }),
                   IconTextButton(
                       iconPicture: 'assets/icons/products.png', 
@@ -84,14 +86,14 @@ class Homeview extends StatelessWidget {
                 children: [
                 
                   Container(
-                    margin: EdgeInsets.all(8),
+                    margin: const EdgeInsets.all(8),
                     width: MediaQuery.of(context).size.width,
                     color: Colors.white54,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       Text('My Upcoming Reservations',style: TextStyle(color: Constants().secondaryColor,fontSize: 20),),
-                      IconButton(onPressed: null, icon: Icon(Icons.calendar_month))
+                      const IconButton(onPressed: null, icon: Icon(Icons.calendar_month))
                     ],) ),
                   BookingItem(price: '30,000MWK', specialty: 'Braiding', datetime: '19-06-2024 13:00hrs', name: 'Braiding'),
                   BookingItem(price: '50,000MWK', specialty: 'Massage', datetime: '20-06-2024 13:00hrs', name: 'Braiding'),
@@ -99,7 +101,7 @@ class Homeview extends StatelessWidget {
                 ],
               ),
             
-               SizedBox(height:200) 
+               const SizedBox(height:200) 
               
             
             ])),

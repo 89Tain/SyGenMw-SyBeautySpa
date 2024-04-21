@@ -3,15 +3,16 @@ import 'package:card_loading/card_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constants/constants.dart';
-import '../views/jobs/job_details.dart';
+import '../classes/details.class.stl.dart';
 
+// ignore: must_be_immutable
 class StylistItem extends StatelessWidget {
   
   String picture='';
   String name='';
   String specialty='';
 
-  StylistItem({Key? key, required this.specialty,required this.picture, required this.name});
+  StylistItem({super.key,  required this.specialty,required this.picture, required this.name});
   @override
   Widget build(BuildContext context) {
   
@@ -24,7 +25,7 @@ class StylistItem extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(5),),
-                      child: Container(
+                      child: SizedBox(
                       height: 250,
                       child: CachedNetworkImage(
                                   imageUrl: picture,
@@ -43,11 +44,11 @@ class StylistItem extends StatelessWidget {
                                     margin: EdgeInsets.only(bottom: 10),
                                   ),
                                   errorWidget: (context, url, error) =>
-                                      Icon(Icons.error),
+                                      const Icon(Icons.error),
                                 ),
                     ),
                     ),
-                    SizedBox(height: 10,),
+                    const SizedBox(height: 10,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,12 +60,10 @@ class StylistItem extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                           Icon(Icons.category,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
+                          const SizedBox(width: 2,),
                           Text(specialty),
                         ],),
 
-                        
-                      
                         
                       ],
                     )

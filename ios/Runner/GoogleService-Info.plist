@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCzaiqxz99CFZYUmxTJCgnlDYG7oo_ry_w</string>
+	<string>AIzaSyDFlo-9fYm-SpEPeCrxzAhxXWQloofO2tQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>744214595665</string>
+	<string>741203686068</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.sygen.265jobs</string>
+	<string>com.example.beautySpa</string>
 	<key>PROJECT_ID</key>
-	<string>jobs-77794</string>
+	<string>sybeautyspa-e6cc5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>jobs-77794.appspot.com</string>
+	<string>sybeautyspa-e6cc5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:744214595665:ios:a2b8fc9bebae4a7ea19070</string>
+	<string>1:741203686068:ios:5f5feff019ec9a69d39de1</string>
 </dict>
 </plist>

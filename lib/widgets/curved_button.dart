@@ -1,9 +1,6 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../constants/constants.dart';
 
 class CurvedButton extends StatelessWidget {
   
@@ -18,7 +15,7 @@ class CurvedButton extends StatelessWidget {
   
 
 
-  CurvedButton({Key? key,this.borderColor=Colors.black87,this.textColor=Colors.black87, this.width=60,this.height=20,this.fontSize=10.0,required this.text, this.buttonColor=Colors.white38,required this.onPressed});
+  CurvedButton({super.key,this.borderColor=Colors.black87,this.textColor=Colors.black87, this.width=60,this.height=20,this.fontSize=10.0,required this.text, this.buttonColor=Colors.white38,required this.onPressed});
   @override
   Widget build(BuildContext context) {
   

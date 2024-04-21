@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "741203686068",
+    "project_id": "sybeautyspa-e6cc5",
+    "storage_bucket": "sybeautyspa-e6cc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741203686068:android:9d607d5bb7e89e87d39de1",
+        "android_client_info": {
+          "package_name": "com.example.beauty_spa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLRMrhexaZ4GajGx22Z9Qwbrldwx6hqqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

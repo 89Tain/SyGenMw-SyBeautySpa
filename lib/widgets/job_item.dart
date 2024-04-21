@@ -3,8 +3,9 @@ import 'package:card_loading/card_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constants/constants.dart';
-import '../views/jobs/job_details.dart';
+import '../classes/details.class.stl.dart';
 
+// ignore: must_be_immutable
 class JobItem extends StatelessWidget {
   
   String picture='';
@@ -15,7 +16,7 @@ class JobItem extends StatelessWidget {
   String expiryDate='';
   String category='';
 
-  JobItem({Key? key, required this.category,required this.expiryDate,required this.postedDate,required this.picture, required this.companyName, required this.location,required this.jobTitle});
+  JobItem({super.key, required this.category,required this.expiryDate,required this.postedDate,required this.picture, required this.companyName, required this.location,required this.jobTitle});
   @override
   Widget build(BuildContext context) {
   
@@ -30,7 +31,7 @@ class JobItem extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ClipRRect(
                         borderRadius: const BorderRadius.all(Radius.circular(100),),
-                        child: Container(
+                        child: SizedBox(
                         height: 50,
                         width: 50,
                         child: CachedNetworkImage(
@@ -43,14 +44,14 @@ class JobItem extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    placeholder: (context, url) => CardLoading(
+                                    placeholder: (context, url) => const CardLoading(
                                       height: 100,
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(10)),
                                       margin: EdgeInsets.only(bottom: 10),
                                     ),
                                     errorWidget: (context, url, error) =>
-                                        Icon(Icons.error),
+                                        const Icon(Icons.error),
                                   ),
                       ),
                       ),
@@ -65,7 +66,7 @@ class JobItem extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                           Icon(Icons.location_city,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
+                          const SizedBox(width: 2,),
                           Text(companyName),
                         ],),
                         Row(
@@ -73,20 +74,20 @@ class JobItem extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                           Icon(Icons.category,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
+                          const SizedBox(width: 2,),
                           Text(category),
                         ],),
 
                         
                         Row(children: [
                           Icon(Icons.location_pin,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
+                          const SizedBox(width: 2,),
                           Text(location),
                         ],),
                         Row(
                           children: [
                           Icon(Icons.calendar_month,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
+                          const SizedBox(width: 2,),
                           Text('$expiryDate || $expiryDate'),
                         ],),
                         

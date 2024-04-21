@@ -1,16 +1,13 @@
 
-import 'dart:ffi';
 
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:card_loading/card_loading.dart';
+import 'package:beauty_spa/widgets/job_item.dart';
 import 'package:flutter/material.dart';
-import 'package:malawi_jobs/widgets/job_item.dart';
 import '../../constants/constants.dart';
 import '../../widgets/bottom_nav.dart';
-import '../../widgets/special_title.dart';
 
 
 
+// ignore: must_be_immutable
 class SavedJobs extends StatelessWidget {
 
   var jobItems=['https://images.africanfinancials.com/mw-tnm-logo.png',
@@ -26,6 +23,8 @@ class SavedJobs extends StatelessWidget {
               'https://jobsearchmalawi.com/wp-content/uploads/2021/01/Link-Community-Development-Malawi-150x150.jpeg',
               'https://jobsearchmalawi.com/wp-content/uploads/job-manager-uploads/company_logo/2022/07/Asamala-logo-for-2-150x150.jpg',
               ];
+
+  SavedJobs({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,20 +47,20 @@ class SavedJobs extends StatelessWidget {
                 children: [
                   Constants().appLogo,
                   Container(
-                    margin: EdgeInsets.all(8),
+                    margin: const EdgeInsets.all(8),
                     width: MediaQuery.of(context).size.width,
                     color: Colors.white54,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       Text('Saved Jobs',style: TextStyle(color: Constants().secondaryColor,fontSize: 20),),
-                      IconButton(onPressed: null, icon: Icon(Icons.sort_sharp))
+                      const IconButton(onPressed: null, icon: Icon(Icons.sort_sharp))
                     ],) ),
                 ],
               ),
               JobItem(picture: jobItems[0], category: 'Engineering',companyName: 'TNM', location: 'Blantyre', jobTitle: 'Network Engineer',postedDate: '11-06-23',expiryDate: '12-17-24',),
               JobItem(picture: jobItems[1], category: 'House care',companyName: 'Airtel', location: 'Mnneo', jobTitle: 'IT Manager',postedDate: '11-06-23',expiryDate: '12-17-24',),
-              SizedBox(height: 100,)
+              const SizedBox(height: 100,)
             
             ])),
       ));

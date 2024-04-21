@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../constants/constants.dart';
 
+// ignore: must_be_immutable
 class IconTextButton extends StatelessWidget {
   
   String iconPicture='';
@@ -11,7 +11,7 @@ class IconTextButton extends StatelessWidget {
   double size;
   double spaceHeight;
 
-  IconTextButton({Key? key,this.spaceHeight=20, this.size=70 ,required this.iconPicture,required this.text,required this.onPressed});
+  IconTextButton({super.key,this.spaceHeight=20, this.size=70 ,required this.iconPicture,required this.text,required this.onPressed});
   @override
   Widget build(BuildContext context) {
   

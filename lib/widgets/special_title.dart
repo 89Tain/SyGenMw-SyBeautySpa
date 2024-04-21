@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 
+// ignore: must_be_immutable
 class SpecialTitle extends StatelessWidget {
   
   String leading='';
   String tail='';
 
-  SpecialTitle({Key? key, required this.leading, required this.tail});
+  SpecialTitle({super.key,  required this.leading, required this.tail});
   @override
   Widget build(BuildContext context) {
   

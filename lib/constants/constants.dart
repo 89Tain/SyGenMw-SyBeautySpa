@@ -4,7 +4,7 @@ import '../widgets/special_title.dart';
 
 
 class Constants{
-  final Color primaryColor=Color.fromARGB(255, 224, 74, 124);
+  final Color primaryColor=const Color.fromARGB(255, 224, 74, 124);
   final Color secondaryColor=const Color(0xff0f65af);
   final String signatureFont='richard';
   final String umodziParkFont='cambria_bold';

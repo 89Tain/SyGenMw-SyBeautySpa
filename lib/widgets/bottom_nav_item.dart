@@ -1,16 +1,17 @@
+import 'package:beauty_spa/constants/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:malawi_jobs/constants/constants.dart';
 
+// ignore: must_be_immutable
 class BottomNavItem extends StatelessWidget {
   String text = '';
   String icon = '';
   Function()? onPressed;
 
-  BottomNavItem({Key? key, required this.text, required this.icon, required this.onPressed});
+  BottomNavItem({super.key, required this.text, required this.icon, required this.onPressed});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 70,
+      width: 75,
       child: MaterialButton(
         onPressed: onPressed,
         padding: EdgeInsets.zero,

@@ -2,19 +2,20 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_loading/card_loading.dart';
 import 'package:flutter/material.dart';
-import 'package:malawi_jobs/widgets/job_item.dart';
 import '../../constants/constants.dart';
 import '../../widgets/bottom_nav.dart';
-import '../../widgets/special_title.dart';
 
 
 
+// ignore: must_be_immutable
 class JobDetails extends StatelessWidget {
 
   var jobItems=['https://images.africanfinancials.com/mw-tnm-logo.png',
               'https://s3-ap-southeast-1.amazonaws.com/bsy/iportal/images/airtel-logo-white-text-vertical.jpg',
               'https://play-lh.googleusercontent.com/yI8lh_Ahhu2qlovLC9F2_URmowf_82iLvi7GJuXsB0n2kXvg-Xkn02QHubT3Dh6Uis0',
               ];
+
+  JobDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class JobDetails extends StatelessWidget {
               Constants().appLogo,
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(10),),
-                child: Container(
+                child: SizedBox(
                 height: 300,
                 width: MediaQuery.of(context).size.width,
                 child: CachedNetworkImage(
@@ -49,14 +50,14 @@ class JobDetails extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            placeholder: (context, url) => CardLoading(
+                            placeholder: (context, url) => const CardLoading(
                               height: 100,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                               margin: EdgeInsets.only(bottom: 10),
                             ),
                             errorWidget: (context, url, error) =>
-                                Icon(Icons.error),
+                                const Icon(Icons.error),
                           ),
               ),
               ),
@@ -76,8 +77,8 @@ class JobDetails extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                 Icon(Icons.location_city,color: Constants().primaryColor,size: 20),
-                                SizedBox(width: 2,),
-                                Text('Airtel',style: TextStyle(fontSize: 15)),
+                                const SizedBox(width: 2,),
+                                const Text('Airtel',style: TextStyle(fontSize: 15)),
                               ],),
                             ),
                             Row(
@@ -85,16 +86,16 @@ class JobDetails extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                             Icon(Icons.category,color: Constants().primaryColor,size: 15),
-                            SizedBox(width: 2,),
-                            Text('House Care'),
+                            const SizedBox(width: 2,),
+                            const Text('House Care'),
                           ],),
                          
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical:4),
                               child: Row(children: [
                                 Icon(Icons.location_pin,color: Constants().primaryColor,size: 20),
-                                SizedBox(width: 2,),
-                                Text('Blantyre, Malawi',style: TextStyle(fontSize: 15),),
+                                const SizedBox(width: 2,),
+                                const Text('Blantyre, Malawi',style: TextStyle(fontSize: 15),),
                               ],),
                             ),
                            
@@ -102,8 +103,8 @@ class JobDetails extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(vertical:4),
                               child: Row(children: [
                                 Icon(Icons.calendar_month,color: Constants().primaryColor,size: 20),
-                                SizedBox(width: 2,),
-                                Text('12-12-12 to 12-12-12',style: TextStyle(fontSize: 15)),
+                                const SizedBox(width: 2,),
+                                const Text('12-12-12 to 12-12-12',style: TextStyle(fontSize: 15)),
                               ],),
                             ),
                             
@@ -111,12 +112,12 @@ class JobDetails extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Card(child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Card(child: Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children:const [
+                        children:[
                            Text(' \nJob Description',style: TextStyle(fontWeight: FontWeight.bold),),
                       
                            Text('YouthCare Ministries is inviting applications from suitably qualified individuals to fill the position of Accounts Assistant / Bursar at YouthCare Ministries Secondary School, Chitipi, Lilongwe.'),
@@ -132,6 +133,7 @@ class JobDetails extends StatelessWidget {
                             ,Text('\nQualifications and experience',style: TextStyle(fontWeight: FontWeight.bold),),
                             Text(
                             '•Diploma in Accounting'
+                            // ignore: unnecessary_string_escapes
                             '\n•A minimum of three years\’ experience in relevant fields or educational institutions'
                             '\n•Proficient with Excel'
                             '\n•Very good interpersonal skills and ability to interact with parent, staff and pupils.'
@@ -151,7 +153,7 @@ class JobDetails extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('\nContacts and application method (These will only be shown if the person has paid a subscription)',style: TextStyle(fontWeight: FontWeight.bold),),
+                            const Text('\nContacts and application method (These will only be shown if the person has paid a subscription)',style: TextStyle(fontWeight: FontWeight.bold),),
                           
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical:4),
@@ -159,7 +161,7 @@ class JobDetails extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                Text('+265 99 637 22 03',style: TextStyle(fontSize: 15)),
+                                const Text('+265 99 637 22 03',style: TextStyle(fontSize: 15)),
                                 Icon(Icons.phone,color: Constants().primaryColor,size: 20),
                                
                                 
@@ -172,7 +174,7 @@ class JobDetails extends StatelessWidget {
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                Text('tchimzere@gmail.com',style: TextStyle(fontSize: 15)),
+                                const Text('tchimzere@gmail.com',style: TextStyle(fontSize: 15)),
                                 Icon(Icons.mail,color: Constants().primaryColor,size: 20),
                                
                               ],),
@@ -183,7 +185,7 @@ class JobDetails extends StatelessWidget {
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                Text('Box 32212',style: TextStyle(fontSize: 15)),
+                                const Text('Box 32212',style: TextStyle(fontSize: 15)),
                                 Icon(Icons.add_box,color: Constants().primaryColor,size: 20),
                                 
                               ],),
@@ -195,7 +197,7 @@ class JobDetails extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height:200 ,)
+                    const SizedBox(height:200 ,)
             ]),
         ),
       ));

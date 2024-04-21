@@ -3,8 +3,9 @@ import 'package:card_loading/card_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constants/constants.dart';
-import '../views/jobs/job_details.dart';
+import '../classes/details.class.stl.dart';
 
+// ignore: must_be_immutable
 class ProductItem extends StatelessWidget {
   
   String picture='';
@@ -12,7 +13,7 @@ class ProductItem extends StatelessWidget {
   String specialty='';
   String price='';
 
-  ProductItem({Key? key, required this.price,required this.specialty,required this.picture, required this.name});
+  ProductItem({super.key, required this.price,required this.specialty,required this.picture, required this.name});
   @override
   Widget build(BuildContext context) {
   
@@ -25,7 +26,7 @@ class ProductItem extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(5),),
-                      child: Container(
+                      child: SizedBox(
                       height: 100,
                       width: 100,
                       child: CachedNetworkImage(
@@ -45,11 +46,11 @@ class ProductItem extends StatelessWidget {
                                     margin: EdgeInsets.only(bottom: 10),
                                   ),
                                   errorWidget: (context, url, error) =>
-                                      Icon(Icons.error),
+                                      const Icon(Icons.error),
                                 ),
                     ),
                     ),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +62,7 @@ class ProductItem extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                           Icon(Icons.category,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
+                          const SizedBox(width: 2,),
                           Text(specialty),
                         ],),
                         Row(
@@ -69,8 +70,8 @@ class ProductItem extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                           Icon(Icons.money,color: Constants().primaryColor,size: 15),
-                          SizedBox(width: 2,),
-                           Text(price ,style: TextStyle(color: Colors.pink) ,)
+                          const SizedBox(width: 2,),
+                           Text(price ,style: const TextStyle(color: Colors.pink) ,)
                         ],),
                         
 

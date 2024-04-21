@@ -1,13 +1,9 @@
+import 'package:beauty_spa/widgets/benefits.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:malawi_jobs/views/auth/register.dart';
-
-import '../../constants/constants.dart';
-import '../../widgets/benefits.dart';
-import '../../widgets/curved_button.dart';
-import '../../widgets/special_title.dart';
 
 class CategoriesView extends StatelessWidget {
+  const CategoriesView({super.key});
+
 
 
   @override
@@ -21,7 +17,7 @@ class CategoriesView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       
-                      Text('Select Category',style: TextStyle(fontSize: 30),),
+                      const Text('Select Category',style: TextStyle(fontSize: 30),),
                       CategoryOption(
                         onPressed: () {
                          // Get.to(RegisterView(category: 'Service Seeker',));
@@ -36,7 +32,7 @@ class CategoriesView extends StatelessWidget {
                         heading:'Service Provider',
                         body: 'Get discounts on food and beverages',
                          icon: 'assets/icons/hotel.png',),
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                       //CurvedButton(buttonColor: Constants().primaryColor,text: 'Join Us',onPressed: (){Get.to(Register());},height: 50,fontSize: 18,width: 200,),
                       //TextButton(onPressed: (){Get.to(Login());}, child: Text('Log In',style: TextStyle(color: Constants().primaryColor,fontSize: 15,fontWeight: FontWeight.w200,fontFamily: Constants().umodziParkFontNormal),))
                

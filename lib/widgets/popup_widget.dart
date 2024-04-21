@@ -17,7 +17,7 @@ class PopupWidget extends GetxController {
   showFailedSnackbar({String? error}) {
     Get.snackbar(
       'Failed', 
-      'Operation Failed. '+error!,
+      'Operation Failed. ${error!}',
       duration: const Duration(seconds: 5), icon: const Icon(Icons.person, color: Colors.white), snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.red, colorText: Colors.white);
   }
 

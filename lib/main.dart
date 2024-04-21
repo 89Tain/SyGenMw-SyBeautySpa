@@ -2,25 +2,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:malawi_jobs/views/jobs/saved_jobs.dart';
-import 'package:malawi_jobs/views/auth/category_selector.dart';
-import 'package:malawi_jobs/views/auth/login.dart';
-import 'package:malawi_jobs/views/home.dart';
-import 'package:malawi_jobs/views/jobs/saved_jobs.dart';
-
-import 'controllers/controllersInitializer.dart';
+import 'controllers/lc.controllersInitializer.dart';
 import 'views/splashscreen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   Controllers.initializeControllers();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -30,13 +28,15 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
     ]);
     return GetMaterialApp(
-      title: 'Umodzi Park',
+      debugShowCheckedModeBanner: false,
+
+      title: 'Beauty Spa',
       defaultTransition: Transition.fadeIn,
       theme: ThemeData(
         fontFamily: 'quicksand',
         primarySwatch: Colors.blueGrey,
       ),
-      home: SplashScreenView(),
+      home: const SplashScreenView(),
       //home: SavedJobs(),
     );
   }

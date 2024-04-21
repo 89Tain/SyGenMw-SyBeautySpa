@@ -1,12 +1,13 @@
+import 'package:beauty_spa/constants/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:malawi_jobs/constants/constants.dart';
 
+// ignore: must_be_immutable
 class ProfileRowItem extends StatelessWidget {
   String head = '';
   String tail = '';
  
 
-  ProfileRowItem({Key? key, required this.head, required this.tail});
+  ProfileRowItem({super.key,  required this.head, required this.tail});
   @override
   Widget build(BuildContext context) {
     return   Padding(
@@ -19,12 +20,12 @@ class ProfileRowItem extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                          Text(head,style:TextStyle(fontWeight: FontWeight.bold),),
+                          Text(head,style:const TextStyle(fontWeight: FontWeight.bold),),
                           Text(tail)
               ],),
                       ),
                   Container(
-                    margin: EdgeInsets.only(top: 5),
+                    margin: const EdgeInsets.only(top: 5),
                     width: MediaQuery.of(context).size.width,height: 0.5,color: Constants().primaryColor,)
                     ],
                   ),

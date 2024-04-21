@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 
+// ignore: must_be_immutable
 class CategoryOption extends StatelessWidget {
   String heading = '';
   String body = '';
@@ -9,21 +10,22 @@ class CategoryOption extends StatelessWidget {
   Function()? onPressed;
 
   CategoryOption(
-      {Key? key,
+      {super.key,
       required this.heading,
       required this.body,
       required this.icon,this.showBody=false,
-      required this.onPressed});
+      required this.onPressed}
+    );
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       padding: EdgeInsets.zero,
       onPressed: onPressed,
       child: Card(
-        margin: EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(top: 10),
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        color: Color.fromARGB(31, 198, 185, 185),
+        color: const Color.fromARGB(31, 198, 185, 185),
         child: Row(
           children: [
             Padding(
@@ -48,8 +50,8 @@ class CategoryOption extends StatelessWidget {
                 ),
                 showBody?Text(
                   body,
-                  style: TextStyle(fontSize: 12),
-                ):SizedBox(),
+                  style: const TextStyle(fontSize: 12),
+                ):const SizedBox(),
               ],
             )),
           ],
